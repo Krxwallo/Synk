@@ -4,6 +4,7 @@ plugins {
     kotlin("multiplatform") version "1.8.0"
     kotlin("plugin.serialization") version "1.8.0"
     id("org.jetbrains.compose") version "1.3.0"
+    id("maven-publish")
 }
 
 group = "io.github.krxwallo"
@@ -38,6 +39,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0-RC")
+                implementation(compose.runtime)
             }
         }
         val commonTest by getting {
@@ -47,12 +49,7 @@ kotlin {
         }
         val jvmMain by getting
         val jvmTest by getting
-        val jsMain by getting {
-            dependencies {
-                implementation(compose.web.core)
-                implementation(compose.runtime)
-            }
-        }
+        val jsMain by getting
         val jsTest by getting
     }
 }
