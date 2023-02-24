@@ -34,7 +34,6 @@ actual operator fun <T : Any> SynkVar<T>.getValue(instance: Any, property: KProp
  * Here we update the client-sided [SynkVar.value] property to trigger recomposition of the UI.
  */
 actual inline operator fun <reified T : Any> SynkVar<T>.setValue(instance: Any, property: KProperty<*>, newValue: T) {
-    println("SyncedGameVar.setValue called on the client!")
     this.value = newValue
 }
 
