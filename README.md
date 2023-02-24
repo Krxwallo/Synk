@@ -1,5 +1,5 @@
 # Synk
-[![Release](https://jitpack.io/v/Krxwallo/Synk.svg)](https://jitpack.io/#Krxwallo/Synk)
+[![Release](https://jitpack.io/v/krxwallo/synk.svg)](https://jitpack.io/#Krxwallo/Synk)
 
 Library for easily syncing variables from a kotlin server jvm target to a kotlin client js (compose) target.
 
